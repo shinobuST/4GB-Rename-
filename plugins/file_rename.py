@@ -101,7 +101,7 @@ async def rename_start(client, message):
         except:
             pass
     else:
-        if rkn_file.file_size > 2000 * 1024 * 1024 and client.premium:
+        if rkn_file.file_size > 4000 * 1024 * 1024 and client.premium:
             return await message.reply_text("If you want to rename 4GB+ files then you will have to buy premium. /plans")
 
         try:
@@ -247,7 +247,7 @@ async def doc(bot, update):
          img.save(ph_path, "JPEG")
 
     type = update.data.split("_")[1]
-    if media.file_size > 2000 * 1024 * 1024:
+    if media.file_size > 4000 * 1024 * 1024:
         try:
             if type == "document":
                 filw = await app.send_document(
