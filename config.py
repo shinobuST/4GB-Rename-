@@ -34,25 +34,27 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # digital_botz client config
-    API_ID = os.environ.get("API_ID", "")
-    API_HASH = os.environ.get("API_HASH", "")
+    API_ID = os.environ.get("API_ID", "29037902")
+    API_HASH = os.environ.get("API_HASH", "8f963da8e2040053cf0ad8932244890e")
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
 
     # premium account string session required 😢 
     STRING_SESSION = os.environ.get("STRING_SESSION", "")
     
     # database config
-    DB_NAME = os.environ.get("DB_NAME","Digital_Rename_Bot")     
-    DB_URL = os.environ.get("DB_URL","")
+    DB_NAME = os.environ.get("DB_NAME","Cluster0")     
+    DB_URL = os.environ.get("DB_URL","mongodb+srv://Kdramast:Kdramast@cluster0.uhf52.mongodb.net/?retryWrites=true&w=majority")
  
     # other configs
     RKN_PIC = os.environ.get("RKN_PIC", "https://telegra.ph/file/b746aadfe59959eb76f59.jpg")
-    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6705898491').split()]
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002123429361"))
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6692613520').split()]
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002320080278"))
 
     # free upload limit 
-    FREE_UPLOAD_LIMIT = 6442450944 # calculation 6*1024*1024*1024=results
-
+    #FREE_UPLOAD_LIMIT = 6442450944 # calculation 6*1024*1024*1024=results
+    # free upload limit
+    FREE_UPLOAD_LIMIT = 107374182400  # 100 * 1024 * 1024 * 1024 = 100GB
+    
     # premium mode feature ✅
     UPLOAD_LIMIT_MODE = True 
     PREMIUM_MODE = True 
